@@ -62,11 +62,11 @@ const SocialMediaAnalytics = () => {
                 console.log("Using cached token from local storage.");
             } else {
                 const registrationData = {
-                    email: "avinashAnand@gmail.com", 
-                    name: "Avii Anand",
-                    mobileNo: "9533613360", 
-                    githubUsername: "avtii1253",
-                    rollNo: "22053919",
+                    email: "22052018@kiit.ac.in",
+                    name: "Avinash Anand",
+                    mobileNo: "9523613460",
+                    githubUsername: "avii1253",
+                    rollNo: "22052018",
                     collegeName: "Kalinga Institute Of Industrial Technology",
                     accessCode: "nwpwrZ",
                 };
@@ -121,13 +121,15 @@ const SocialMediaAnalytics = () => {
                 {topUsers.length > 0 ? (
                     topUsers.map((user) => (
                         <li key={user.id} className="py-2 border-b last:border-b-0">
-                            {user.name} - {user.postCount} posts
+                            <span>{user.name}</span>
+                            <span className="post-badge">{user.postCount} posts</span>
                         </li>
                     ))
                 ) : (
                     <p className="text-gray-500">No data available.</p>
                 )}
             </ul>
+
         </div>
     );
 };
